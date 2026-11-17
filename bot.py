@@ -24,8 +24,8 @@ if not BOT_TOKEN or not OWNER_ID:
 
 OWNER_ID = int(OWNER_ID)
 
-DB_NAME = "finance.db"
-
+os.makedirs("/app/data", exist_ok=True)
+DB_NAME = "/app/data/finance.db"
 # БАЗА ДАННЫХ
 def init_db():
     with sqlite3.connect(DB_NAME) as db:
